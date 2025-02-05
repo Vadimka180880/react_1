@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
@@ -14,5 +13,8 @@ export default defineConfig({
     fs: {
       strict: false
     }
+  },
+  resolve: {
+    extensions: [".js", ".jsx"], 
   }
 });
